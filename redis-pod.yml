@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-pod
+  labels:
+    name: redeis-app
+    author: intelliqit
+spec:
+  containers:
+    - name: redis-app
+      image: redis
+      ports:
+        - containerPort: 6379
+...

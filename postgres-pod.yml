@@ -1,0 +1,22 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgress-pod
+  labels:
+    name: postgress-app
+    author: intelliqit
+spec:
+  containers:
+    - name: postgress-app
+      ports:
+        - containerPort: 5432
+      env:
+        - name: POSTGRESS_PASSWORD
+          value: intelliqit
+        - name: POSTGRESS_USER
+          value: myuser
+        - name: POSTGRESS_DB
+          value: mydb
+
+...
